@@ -47,7 +47,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://authentication-backend-5fku.onrender.com/api/auth/login',
         loginData
       );
 
@@ -73,7 +73,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/forgot-password/send-otp',
+        'https://authentication-backend-5fku.onrender.com/api/auth/forgot-password/send-otp',
         {
           email: forgotData.email,
         }
@@ -96,7 +96,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/forgot-password/verify-otp',
+        'https://authentication-backend-5fku.onrender.com/api/auth/forgot-password/verify-otp',
         {
           email: forgotData.email,
           otp: forgotData.otp,
@@ -120,7 +120,7 @@ export default function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/reset-password',
+        'https://authentication-backend-5fku.onrender.com/api/auth/reset-password',
         {
           email: forgotData.email,
           otp: forgotData.otp,

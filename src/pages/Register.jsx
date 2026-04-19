@@ -37,7 +37,7 @@ export default function Register() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/register/send-otp',
+        'https://authentication-backend-5fku.onrender.com/api/auth/register/send-otp',
         {
           email: formData.email,
         }
@@ -65,7 +65,7 @@ export default function Register() {
       setLoading(true);
 
       const response = await axios.post(
-        'http://localhost:5000/api/auth/register/verify-otp',
+        'https://authentication-backend-5fku.onrender.com/api/auth/register/verify-otp',
         formData
       );
 
